@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+
 import { Patient } from '../model/patient';
+import { Filter } from '../component/patient/patient.component';
 
 import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class PatientService {
@@ -12,7 +13,13 @@ export class PatientService {
 
   constructor(private http: HttpClient) { }
 
-  getPatients(): Observable<Patient[]> {
-    return this.http.get<Patient[]>(this.BASEURL);
+  getPatients(filter: Filter): Observable<Patient[]> {
+    let params = new HttpParams();
+    params = params.set('gender', filter.gender.toString())
+      .set('encounter', filter.encounter.toString())
+      .set('observation', filter.observation.toString());
+
+    return this.http.get<Patient[]>(this.BASEURL, { params });
   }
+
 }

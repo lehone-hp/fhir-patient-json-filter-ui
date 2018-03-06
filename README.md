@@ -1,26 +1,22 @@
-# Ui
+# Fhir-Patient-Json-Filter UI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
 
-## Development server
+## Prerequisite
+  * fhir-patient-json-filter running on localhost:8080 https://github.com/lehone-hp/fhir-patient-json-filter
+  * nodejs
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Run
 
-## Code scaffolding
+Clone repository from github
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  `git clone https://github.com/lehone-hp/fhir-patient-json-filter-ui.git`
+  
+Change to project home directory
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+  `cd fhir-patient-json-filter-ui`
+  
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
 ## Further help
 
