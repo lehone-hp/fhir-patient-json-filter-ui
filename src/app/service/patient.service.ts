@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class PatientService {
 
-  private BASEURL = 'http://localhost:8080/patients';
+  private BASEURL = 'http://localhost:8091/patients';
 
   constructor(private http: HttpClient) { }
 
